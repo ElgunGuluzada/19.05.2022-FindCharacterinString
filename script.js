@@ -1,3 +1,8 @@
+// Task 1 Static
+
+// Sozdeki herflerin sayini gosteren method
+
+
 // let string = "hhhaaahahahaa"
 
 // console.log("Stringimiz: - ",string);
@@ -25,153 +30,171 @@
 
 // ------------------Dynamic--------------------
 
+// let strPrompt = prompt("Her hansi bir soz daxil edin")
+// let char = prompt(" Qeyd etdiyiniz Sozde her hansi bir simvol secin ve hemin simvolun nece defe yazildigini oyrenin")
 
-let strPrompt = prompt("Her hansi bir soz daxil edin")
-let char = prompt(" Qeyd etdiyiniz Sozde her hansi bir simvol secin ve hemin simvolun nece defe yazildigini oyrenin")
+// let numb = char.charAt(0);
+// // console.log("Qeyd etdiyinin simvol: ", numb);
 
-let numb = char.charAt(0);
-// console.log("Qeyd etdiyinin simvol: ", numb);
+// let charCount = 0;
+// let count = 0;
+// let charCodePrompt;
+// let c = 0;
 
-let charCount = 0;
-let count = 0;
-let charCodePrompt;
-let c = 0;
+// for (let i = 0; i < strPrompt.length; i++) {
+//     let charCode = strPrompt.charAt(i);
+//     console.log("qeyd etdiyiniz simvollar: ", charCode);
+//     if (numb == charCode) {
+//         charCodePrompt = charCode;
+//     }
+//     else if (numb == undefined) {
+//         console.log("Daxil etdiyiniz simvol qeyd olunan metn-de yoxdur");
+//     }
+// }
 
-for (let i = 0; i < strPrompt.length; i++) {
-    let charCode = strPrompt.charAt(i);
-    console.log("qeyd etdiyiniz simvollar: ", charCode);
-    if (numb == charCode) {
-        charCodePrompt = charCode;
-    }
-    else if (numb == undefined) {
-        console.log("Daxil etdiyiniz simvol qeyd olunan metn-de yoxdur");
-    }
-}
+// console.log("Qeyd etdiyiniz soz {", strPrompt, "}");
+// console.log("qeyd olunan sozun uzunlugu", strPrompt.length);
+// console.log("qeyd olunan simvol: |", char, "|");
 
-console.log("Qeyd etdiyiniz soz {", strPrompt, "}");
-console.log("qeyd olunan sozun uzunlugu", strPrompt.length);
-console.log("qeyd olunan simvol: |", char, "|");
-
-for (let index = 0; index < strPrompt.length; index++) {
-    if (strPrompt.charAt(index) == charCodePrompt) {
-        charCount++;
-    }
-}
-console.log("qeyd etdiyiniz simvolun sayi: ", charCount);
-
-//------------------------------herfin sayi
+// for (let index = 0; index < strPrompt.length; index++) {
+//     if (strPrompt.charAt(index) == charCodePrompt) {
+//         charCount++;
+//     }
+// }
+// console.log("qeyd etdiyiniz simvolun sayi: ", charCount);
 
 
-let arr = [];
-let ch;
+// // sozdeki herfleri bir arraye yigib array formasinda geri qaytarmaq ucun
+
+// let arr = [];
+
+// for (let j = 0; j < strPrompt.length; j++) {
+
+//     arr.push(strPrompt.charAt(j))
+// }
+
+// console.log(arr);
 
 
-for (let j = 0; j < strPrompt.length; j++) {
+// // -=-=-=-=-=-= herflerin sayini gosteren method
 
-    arr.push(strPrompt.charAt(j))
+// function findDuplicates() {
+//     let obj = {
+//         word: "",
+//         uniqueChar: "",
+//         uniqueCount: 0,
+//         duplicates: 0
+//     };
 
-}
+//     for (let i = 0; i < strPrompt.length; i++) {
+//         obj.word += strPrompt[i];
 
-
-// let charRepeats = function (strPrompt) {
-//     for (let i = 0; i <= strPrompt.length; i++) {
-//         for (let j = i + 1; j <= strPrompt.length; j++) {
-//             if (strPrompt[j] == strPrompt[i]) {
-//                 console.log(strPrompt[j]);
-//                 console.log(strPrompt[i]);
-
-//                 return false;
-
-//             }
+//         if (obj.uniqueChar.indexOf(strPrompt[i]) < 0) {
+//             obj.uniqueChar += strPrompt[i];
+//             obj.uniqueCount++;
+//         }
+//         else {
+//             obj.duplicates++;
 //         }
 //     }
-//     return true;
+//     if (obj.duplicates > 0) {
+//         console.log(strPrompt, " sozunde ", obj.duplicates, " eded simvol tekrari var");
+//     }
+
+//     // obj.uniqueChar = obj.unique.replace(/[&\/\\#,_+()$~%.'":*?<>]/g, '');
+//     // obj.uniqueChar = obj.unique.split('').sort().join('');
+
+//     return obj;
 // }
 
-// console.log(charRepeats(strPrompt));
+// console.log(findDuplicates(strPrompt));
 
-// let mode = {
-//     first: ch
+
+// //  Artiq olanlari secib ayirir
+
+// const getRepeatedChars = (strPrompt) => {
+//     let chars = {};
+//     for (let char of strPrompt) {
+//         chars[char] = (chars[char] || 0) + 1;
+//     }
+//     return Object.entries(chars).filter(char => char[1] > 1).map(char => char[0]);
 // }
-// console.log(mode);
+// console.log("Tekrar Olunan Simvollar: ", getRepeatedChars(strPrompt));
+// //----------------------------------
+
+
+// // Herflerin sayini gosterir
+
+// function CharCount(strPrompt) {
+//     if (strPrompt) {
+//         let newObj = {};
+//         for (let i = 0; i < strPrompt.length; i++) {
+//             if (newObj[strPrompt[i]]) {
+//                 newObj[strPrompt[i]]++
+//             }
+//             else {
+//                 newObj[strPrompt[i]] = 1;
+//             }
+//         }
+//         console.log("Sozde olan simvollarin sayi: ", newObj);
+//     }
+// }
+
+// CharCount(strPrompt)
 
 
 
-// console.log(ch);
-console.log(arr);
+// Task 1 End
 
 
-// -=-=-=-=-=-= herflerin sayini gosteren method
+//----------------------
 
-function findDuplicates() {
-    let obj = {
-        word: "",
-        uniqueChar: "",
-        uniqueCount: 0,
-        duplicates: 0
-    };
 
-    for (let i = 0; i < strPrompt.length; i++) {
-        obj.word += strPrompt[i];
+// Task 2 Start
 
-        if (obj.uniqueChar.indexOf(strPrompt[i]) < 0) {
-            obj.uniqueChar += strPrompt[i];
-            obj.uniqueCount++;
-        }
-        else {
-            obj.duplicates++;
-        }
+// Bir class yaradirsiz ve o classin icerisinde plus, minus, multiply, divide functionlari olur.
+// var result = new CustomMatch(50).plus(6).minus(30).multiply(3).divide(2)
+// resultin neticesi bu yazilisa gore 50+6-30*3/2 mentiqi ile (riyazi prinsibi unudun,
+// vurma bolme onceliyine ehtiyac yoxdu) 
+// 39 olmalidi
+
+
+class CustomMatch {
+    constructor(numb) {
+        this.numb = numb
     }
-    if (obj.duplicates > 0) {
-        console.log(strPrompt, " sozunde ", obj.duplicates, " eded simvol tekrari var");
+
+    Plus(numb) {
+        this.numb += numb;
+        return this;
     }
 
-    // obj.uniqueChar = obj.unique.replace(/[&\/\\#,_+()$~%.'":*?<>]/g, '');
-    // obj.uniqueChar = obj.unique.split('').sort().join('');
-
-    return obj;
-}
-
-console.log(findDuplicates(strPrompt));
-
-
-//  Artiq olanlari secib ayirir
-
-const getRepeatedChars = (strPrompt) => {
-    let chars = {};
-    for (let char of strPrompt) {
-        chars[char] = (chars[char] || 0) + 1;
+    Minus(numb) {
+        this.numb -= numb;
+        return this;
     }
-    return Object.entries(chars).filter(char => char[1] > 1).map(char => char[0]);
-}
-console.log("Tekrar Olunan Simvollar: ", getRepeatedChars(strPrompt));
-//----------------------------------
 
+    Multiply(numb) {
+        this.numb *= numb;
+        return this;
+    }
 
-// Herflerin sayini gosterir
+    Divide(numb) {
+        this.numb /= numb;
+        return this;
+    }
 
-function CharCount(strPrompt) {
-    if (strPrompt) {
-        let newObj = {};
-        for (let i = 0; i < strPrompt.length; i++) {
-            if (newObj[strPrompt[i]]) {
-                newObj[strPrompt[i]]++
-            }
-            else {
-                newObj[strPrompt[i]] = 1;
-            }
-        }
-        console.log("Sozde olan simvollarin sayi: ", newObj);
+    toString() {
+        return this.numb;
     }
 }
 
-CharCount(strPrompt)
+let result = new CustomMatch(50).Plus(6).Minus(30).Multiply(3).Divide(2);
+
+console.log(result.toString());
 
 
-
-
-
-
+// Task 2 End
 
 
 

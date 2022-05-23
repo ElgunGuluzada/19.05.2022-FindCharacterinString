@@ -159,50 +159,80 @@
 // 39 olmalidi
 
 
-class CustomMatch {
-    constructor(numb) {
-        this.numb = numb
-    }
+// class CustomMatch {
+//     constructor(numb) {
+//         this.numb = numb
+//     }
 
-    Plus(numb) {
-        this.numb += numb;
-        return this;
-    }
+//     Plus(numb) {
+//         this.numb += numb;
+//         return this;
+//     }
 
-    Minus(numb) {
-        this.numb -= numb;
-        return this;
-    }
+//     Minus(numb) {
+//         this.numb -= numb;
+//         return this;
+//     }
 
-    Multiply(numb) {
-        this.numb *= numb;
-        return this;
-    }
+//     Multiply(numb) {
+//         this.numb *= numb;
+//         return this;
+//     }
 
-    Divide(numb) {
-        this.numb /= numb;
-        return this;
-    }
+//     Divide(numb) {
+//         this.numb /= numb;
+//         return this;
+//     }
 
-    toString() {
-        return this.numb;
-    }
-}
+//     toString() {
+//         return this.numb;
+//     }
+// }
 
-let result = new CustomMatch(50).Plus(6).Minus(30).Multiply(3).Divide(2);
+// let result = new CustomMatch(50).Plus(6).Minus(30).Multiply(3).Divide(2);
 
-console.log(result.toString());
+// console.log(result.toString());
 
 
 // Task 2 End
 
 
+//----------------------------
 
 
+// Task 3 Start
+
+// Custom bir array classi yaradin. Hemin arrayin find ve push metodu olsun. Taski ishleyib turn in edin.
 
 
+// class CustomArray {
+//     constructor(arr) {
+//         this.arr = arr;
+//     }
+//     Push(numb) {
+//         let count = 0;
+//         for (let i = 0; i < this.arr.length; i++) {
+//             count++;
+//         }
+//         this.arr[count] = numb;
+//         return this.arr;
+//     }
+//     Find(numb) {
+//         for (let i = 0; i < this.arr.length; i++) {
+//             if (numb == this.arr[i]) {
+//                 return this.arr[i];
+//             }
+//         }
+//         return -1;
+//     }
 
+// }
+// let array = new CustomArray([5, 15, 25, 35]);
+// console.log(array.Push(45));
 
+// console.log(array.Find(25));
+
+// Task 3 End
 
 
 

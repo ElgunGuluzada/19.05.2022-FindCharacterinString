@@ -30,117 +30,117 @@
 
 // ------------------Dynamic--------------------
 
-// let strPrompt = prompt("Her hansi bir soz daxil edin")
-// let char = prompt(" Qeyd etdiyiniz Sozde her hansi bir simvol secin ve hemin simvolun nece defe yazildigini oyrenin")
+let strPrompt = prompt("Her hansi bir soz daxil edin")
+let char = prompt(" Qeyd etdiyiniz Sozde her hansi bir simvol secin ve hemin simvolun nece defe yazildigini oyrenin")
 
-// let numb = char.charAt(0);
-// // console.log("Qeyd etdiyinin simvol: ", numb);
+let numb = char.charAt(0);
+// console.log("Qeyd etdiyinin simvol: ", numb);
 
-// let charCount = 0;
-// let count = 0;
-// let charCodePrompt;
-// let c = 0;
+let charCount = 0;
+let count = 0;
+let charCodePrompt;
+let c = 0;
 
-// for (let i = 0; i < strPrompt.length; i++) {
-//     let charCode = strPrompt.charAt(i);
-//     console.log("qeyd etdiyiniz simvollar: ", charCode);
-//     if (numb == charCode) {
-//         charCodePrompt = charCode;
-//     }
-//     else if (numb == undefined) {
-//         console.log("Daxil etdiyiniz simvol qeyd olunan metn-de yoxdur");
-//     }
-// }
+for (let i = 0; i < strPrompt.length; i++) {
+    let charCode = strPrompt.charAt(i);
+    console.log("qeyd etdiyiniz simvollar: ", charCode);
+    if (numb == charCode) {
+        charCodePrompt = charCode;
+    }
+    else if (numb == undefined) {
+        console.log("Daxil etdiyiniz simvol qeyd olunan metn-de yoxdur");
+    }
+}
 
-// console.log("Qeyd etdiyiniz soz {", strPrompt, "}");
-// console.log("qeyd olunan sozun uzunlugu", strPrompt.length);
-// console.log("qeyd olunan simvol: |", char, "|");
+console.log("Qeyd etdiyiniz soz {", strPrompt, "}");
+console.log("qeyd olunan sozun uzunlugu", strPrompt.length);
+console.log("qeyd olunan simvol: |", char, "|");
 
-// for (let index = 0; index < strPrompt.length; index++) {
-//     if (strPrompt.charAt(index) == charCodePrompt) {
-//         charCount++;
-//     }
-// }
-// console.log("qeyd etdiyiniz simvolun sayi: ", charCount);
-
-
-// // sozdeki herfleri bir arraye yigib array formasinda geri qaytarmaq ucun
-
-// let arr = [];
-
-// for (let j = 0; j < strPrompt.length; j++) {
-
-//     arr.push(strPrompt.charAt(j))
-// }
-
-// console.log(arr);
+for (let index = 0; index < strPrompt.length; index++) {
+    if (strPrompt.charAt(index) == charCodePrompt) {
+        charCount++;
+    }
+}
+console.log("qeyd etdiyiniz simvolun sayi: ", charCount);
 
 
-// // -=-=-=-=-=-= herflerin sayini gosteren method
+// sozdeki herfleri bir arraye yigib array formasinda geri qaytarmaq ucun
 
-// function findDuplicates() {
-//     let obj = {
-//         word: "",
-//         uniqueChar: "",
-//         uniqueCount: 0,
-//         duplicates: 0
-//     };
+let arr = [];
 
-//     for (let i = 0; i < strPrompt.length; i++) {
-//         obj.word += strPrompt[i];
+for (let j = 0; j < strPrompt.length; j++) {
 
-//         if (obj.uniqueChar.indexOf(strPrompt[i]) < 0) {
-//             obj.uniqueChar += strPrompt[i];
-//             obj.uniqueCount++;
-//         }
-//         else {
-//             obj.duplicates++;
-//         }
-//     }
-//     if (obj.duplicates > 0) {
-//         console.log(strPrompt, " sozunde ", obj.duplicates, " eded simvol tekrari var");
-//     }
+    arr.push(strPrompt.charAt(j))
+}
 
-//     // obj.uniqueChar = obj.unique.replace(/[&\/\\#,_+()$~%.'":*?<>]/g, '');
-//     // obj.uniqueChar = obj.unique.split('').sort().join('');
-
-//     return obj;
-// }
-
-// console.log(findDuplicates(strPrompt));
+console.log(arr);
 
 
-// //  Artiq olanlari secib ayirir
+// -=-=-=-=-=-= herflerin sayini gosteren method
 
-// const getRepeatedChars = (strPrompt) => {
-//     let chars = {};
-//     for (let char of strPrompt) {
-//         chars[char] = (chars[char] || 0) + 1;
-//     }
-//     return Object.entries(chars).filter(char => char[1] > 1).map(char => char[0]);
-// }
-// console.log("Tekrar Olunan Simvollar: ", getRepeatedChars(strPrompt));
-// //----------------------------------
+function findDuplicates() {
+    let obj = {
+        word: "",
+        uniqueChar: "",
+        uniqueCount: 0,
+        duplicates: 0
+    };
+
+    for (let i = 0; i < strPrompt.length; i++) {
+        obj.word += strPrompt[i];
+
+        if (obj.uniqueChar.indexOf(strPrompt[i]) < 0) {
+            obj.uniqueChar += strPrompt[i];
+            obj.uniqueCount++;
+        }
+        else {
+            obj.duplicates++;
+        }
+    }
+    if (obj.duplicates > 0) {
+        console.log(strPrompt, " sozunde ", obj.duplicates, " eded simvol tekrari var");
+    }
+
+    // obj.uniqueChar = obj.unique.replace(/[&\/\\#,_+()$~%.'":*?<>]/g, '');
+    // obj.uniqueChar = obj.unique.split('').sort().join('');
+
+    return obj;
+}
+
+console.log(findDuplicates(strPrompt));
 
 
-// // Herflerin sayini gosterir
+//  Artiq olanlari secib ayirir
 
-// function CharCount(strPrompt) {
-//     if (strPrompt) {
-//         let newObj = {};
-//         for (let i = 0; i < strPrompt.length; i++) {
-//             if (newObj[strPrompt[i]]) {
-//                 newObj[strPrompt[i]]++
-//             }
-//             else {
-//                 newObj[strPrompt[i]] = 1;
-//             }
-//         }
-//         console.log("Sozde olan simvollarin sayi: ", newObj);
-//     }
-// }
+const getRepeatedChars = (strPrompt) => {
+    let chars = {};
+    for (let char of strPrompt) {
+        chars[char] = (chars[char] || 0) + 1;
+    }
+    return Object.entries(chars).filter(char => char[1] > 1).map(char => char[0]);
+}
+console.log("Tekrar Olunan Simvollar: ", getRepeatedChars(strPrompt));
+//----------------------------------
 
-// CharCount(strPrompt)
+
+// Herflerin sayini gosterir
+
+function CharCount(strPrompt) {
+    if (strPrompt) {
+        let newObj = {};
+        for (let i = 0; i < strPrompt.length; i++) {
+            if (newObj[strPrompt[i]]) {
+                newObj[strPrompt[i]]++
+            }
+            else {
+                newObj[strPrompt[i]] = 1;
+            }
+        }
+        console.log("Sozde olan simvollarin sayi: ", newObj);
+    }
+}
+
+CharCount(strPrompt)
 
 
 
